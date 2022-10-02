@@ -1,0 +1,130 @@
+/* This is for the background */
+body {
+background-color: #FFFFFF;
+}
+/* This is for the top of the header section */
+.nameplateContainer {
+    background-color: #DF0024;
+    position: relative;
+    border-radius: 10px;
+    height:50px;
+    width:98.75vw - 10px;
+}
+.nameplate {
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+/* This is for the middle of the header section */
+.middleContainer{
+    display: flex;
+    position: relative;
+    width: 98.75vw - 10px;
+    height: 120px;
+}
+/* This is for the mid/left of the header section */
+.middleLeftContainer{
+    background-color: #F3C300;
+    position: relative;
+    border-radius: 10px;
+    width:120px;
+}
+.picturePlate{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+/* This is for the mid/right of the header section */
+.middleRightContainer{
+    flex-grow: 1;
+    background-color: #00AC9F;
+    position: relative;
+    border-radius: 10px;
+    height:120px;
+    width:70vw;
+}
+.descriptionPlate{
+    color: #000000;
+    font-size: 20px;
+    position: relative;
+    width: 90%;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+/* This is for the bottom of the header section */
+.bottomContainer {
+    background-color: #2E6DB4;
+    position: relative;
+    border-radius: 10px;
+    height:50px;
+    width: 50 - 10px;
+}
+.bottomPlate {
+    color: #000000;
+    font-size: 20px;
+    position: relative;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+/* This is for the data section */
+.dataContainer{
+    display: flex;
+    position: relative;
+    width: 98.75vw - 10px;
+    height: 400px;
+}
+/* This is for the data left section */
+.dataLeftContainer{
+    position: relative;
+    border-radius: 10px;
+    width: 33%;
+    
+    border: 5px solid black;
+}
+.dataLeftPlate{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 90%;
+}
+.dataLeftPlate{
+    color: #000000;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+}
+/* This is for the data middle section */
+.dataMiddleContainer{
+    position: relative;
+    border-radius: 10px;
+    width: 33%;
+    
+    border: 5px solid black;
+}
+.dataMiddlePlate{
+    color: #000000;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+}
+/* This is for the data right section */
+.dataRightContainer{
+    flex-grow: 2;
+    position: relative;
+    border-radius: 10px;
+    width: 33%;
+    
+    border: 5px solid black;
+}
+.dataRightPlate{
+    color: #000000;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+}
