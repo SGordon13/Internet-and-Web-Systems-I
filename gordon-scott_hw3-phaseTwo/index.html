@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>
+        Scott Gordon IWS Assignment III
+    </title>
+</head>
+
+<body>
+
+<div id = "nameplateContainer" class="nameplateContainer">
+        <div id="title" class="title">User Information Entry</div><br>
+</div>
+<form id="pageForm">
+    <div id = "yourInformation" class="myMajorContainer">
+        <div>Your information</div>
+        <div id = "firstName">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+        </div>
+        <div id = "lastName">
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+        </div>
+        <br>
+    </div>
+    <br>
+
+
+    <div id = "horiWrapper1">
+        <div id = "currentLocation" class="myMajorContainer">
+            <div>Current Location</div><br>
+            <div id = "country">
+                <label for="country">Country:</label><br>
+                <input type="text" id="ccountry" name="country" value=""><br>
+            </div>
+            <div id = "CityTown">
+                <label for="cityTown">City/Town:</label><br>
+                <input type="text" id="ccityTown" name="cityTown" value=""><br>
+            </div>
+        </div>
+        <div id = "fromLocation" class="myMajorContainer">
+            <div>Where are you from?</div><br>
+            <div id = "country">
+                <label for="country">Country:</label><br>
+                <input type="text" id="fcountry" name="country" value=""><br>
+            </div>
+            <div id = "CityTown">
+                <label for="cityTown">City/Town:</label><br>
+                <input type="text" id="fcityTown" name="cityTown" value=""><br>
+            </div>
+        </div>
+    </div>
+
+    <div id = "horiWrapper2">
+        <div id = "desiredLocation" class="myMajorContainer">
+            <div>Desired Location</div><br>
+            <div id = "country">
+                <label for="country">Country:</label><br>
+                <input type="text" id="dcountry" name="country" value=""><br>
+            </div>
+            <div id = "CityTown">
+                <label for="cityTown">City/Town:</label><br>
+                <input type="text" id="dcityTown" name="cityTown" value=""><br>
+            </div>
+        </div>
+        <div id = "familyFromLocation" class="myMajorContainer">
+            <div>Where is your family from?</div><br>
+            <div id = "country">
+                <label for="country">Country:</label><br>
+                <input type="text" id="facountry" name="country" value=""><br>
+            </div>
+            <div id = "CityTown">
+                <label for="cityTown">City/Town:</label><br>
+                <input type="text" id="facityTown" name="cityTown" value=""><br>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div id = "horiWrapper3">
+        <div>Other Location Information (Town/City)</div><br>
+        <div id = "otherInfo1" class="myMajorContainer">
+            <div>
+                <label for="pob">Place of birth:</label><br>
+                <input type="text" id="pob" name="pob" value=""><br>
+            </div>
+            <div>
+                <label for="liveNow">Where you live now:</label><br>
+                <input type="text" id="liveNow" name="liveNow" value=""><br>
+            </div>
+        </div>
+        <div id = "otherInfo2" class="myMajorContainer">
+            <div>
+                <label for="country">Where you'd like to live:</label><br>
+                <input type="text" id="lcountry" name="cityTown" value=""><br>
+            </div>
+            <div>
+                <label for="cityTown">Where your significant other grew up:</label><br>
+                <input type="text" id="socityTown" name="cityTown" value=""><br>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div id = "horiWrapper4">
+        <div>Investment Portfolio</div><br>
+        <div id = "investRadio" class="myMajorContainer">
+            <div id = "radioInvest">
+                <div>Who's portfolio is this?</div>
+                <input type="radio" id="selfP" name="whoFor" value="Myself">
+                <label for="myself">Myself</label><br>
+                <input type="radio" id="familyP" name="whoFor" value="Family">
+                <label for="family">Family</label><br>
+                <input type="radio" id="otherP" name="whoFor" value="Other">
+                <label for="other">Other</label>
+            </div>
+        </div>
+        <div id = "investFile" class="myMajorContainer">
+            <label for="invFile">Select a file:</label>
+            <input type="file" id="invFile" name="myfile" />
+        </div>
+    </div>
+
+    <br>
+
+    <div id = "horiWrapper5">
+        <div>File Uploads</div><br>
+        <div id = "pictureFile" class="myMajorContainer">
+            <label for="myPicture">Upload Picture:</label>
+            <input type="file" id="myPicture" name="myfile" />
+        </div>
+        <div id = "resumeFile" class="myMajorContainer">
+            <label for="myResume">Upload Resume:</label>
+            <input type="file" id="myResume" name="myfile" />
+        </div>
+        <div id = "cvFile" class="myMajorContainer">
+            <label for="myCV">Upload CV:</label>
+            <input type="file" id="myCV" name="myfile" />
+        </div>
+    </div>
+
+    <br>
+
+    <div id = "horiWrapper5">
+        <div>Other Facts</div><br>
+        <div>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+        <br>
+        <div>Select your favorite color:
+            <input type="color" id="favColor" name="body"
+                    value="#f6b73c">
+        </div>
+        <br>
+        <div>What types of transportation do you use?<br>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Car">
+          <label for="vehicle1"> Car</label><br>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Bike">
+          <label for="vehicle2"> Bike</label><br>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Motorcycle">
+          <label for="vehicle3"> Motorcycle</label><br>
+          <input type="checkbox" id="vehicle4" name="vehicle4" value="PublicTransit">
+          <label for="vehicle4"> Public Transit</label><br>
+          <input type="checkbox" id="vehicle5" name="vehicle5" value="Other">
+          <label for="vehicle5"> Other</label>
+        </div>
+        <br>
+        <div>What is your favorite season?<br>
+            <select name="season" id="season">
+                <option value="spring" selected>Spring</option>
+                <option value="summer">Summer</option>
+                <option value="fall">Fall</option>
+                <option value="winter">Winter</option>
+            </select>
+        </div>
+        <br>
+        <div>How much fun are you having filling out this form on a scale of 1-10?<br>
+            <input id="formFun" type="range" min="1" max="10" step="1" list="steplist" value="5">
+            <datalist id="steplist">
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+            </datalist>
+        </div>
+        <br>
+        <div>How likely are you (on a scale from 1-10)<br>
+            to reccomend this form to a friend or family member?<br>
+            <input id="formRec" type="range" min="1" max="10" step="1" list="steplist" value="5">
+            <datalist id="steplist2">
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+            </datalist>
+        </div>
+        <br>
+        <div>Please provide any addition feedback:<br>
+            <textarea id="addFeedback" name="addFeedback" rows="4" cols="50"></textarea>
+        </div>
+        <br>
+    </div>
+    <br>
+    <input type="button" id="submitButton" value="Submit" onclick="saveFile()" />
+</form>
+
+
+
+
+<script>
+    
+    let saveFile = () => {
+        const fname = document.getElementById('fname');
+        const lname = document.getElementById('lname');
+        const ccountry = document.getElementById('ccountry');
+        const ccityTown = document.getElementById('ccityTown');
+        const fcountry = document.getElementById('fcountry');
+        const fcityTown = document.getElementById('fcityTown');
+        const dcountry = document.getElementById('dcountry');
+        const dcityTown = document.getElementById('dcityTown');
+        const facountry = document.getElementById('facountry');
+        const facityTown = document.getElementById('facityTown');
+        const pob = document.getElementById('pob');
+        const liveNow = document.getElementById('liveNow');
+        const lcountry = document.getElementById('lcountry');
+        const socityTown = document.getElementById('socityTown');
+    
+        const invFile = document.getElementById('invFile');
+        const myPicture = document.getElementById('myPicture');
+        const myResume = document.getElementById('myResume');
+        const myCV = document.getElementById('myCV');
+        
+        const birthday = document.getElementById('birthday');
+        const favColor = document.getElementById('favColor');
+        const vehicle1 = document.getElementById('vehicle1');
+        const vehicle2 = document.getElementById('vehicle2');
+        const vehicle3 = document.getElementById('vehicle3');
+        const vehicle4 = document.getElementById('vehicle4');
+        const vehicle5 = document.getElementById('vehicle5');
+        const season = document.getElementById('season');
+        const formFun = document.getElementById('formFun');
+        const formRec = document.getElementById('formRec');
+        const addFeedback = document.getElementById('addFeedback');
+        
+        let data =
+            '\r fname: ' + fname.value + ' \r\n ' +
+            'lname: ' + lname.value + ' \r\n ' +
+            'ccountry: ' + ccountry.value + ' \r\n ' +
+            'ccityTown: ' + ccityTown.value + ' \r\n ' +
+            'fcountry: ' + fcountry.value + ' \r\n ' +
+            'fcityTown: ' + fcityTown.value + ' \r\n ' +
+            'dcountry: ' + dcountry.value + ' \r\n ' +
+            'dcityTown: ' + dcityTown.value + ' \r\n ' +
+            'facountry: ' + facountry.value + ' \r\n ' +
+            'facityTown: ' + facityTown.value + ' \r\n ' +
+            'pob: ' + pob.value + ' \r\n ' +
+            'liveNow: ' + liveNow.value + ' \r\n ' +
+            'lcountry: ' + lcountry.value + ' \r\n ' +
+            'socityTown: ' + socityTown.value + ' \r\n ' +
+            'invFile: ' + invFile.value + ' \r\n ' +
+            'myPicture: ' + myPicture.value + ' \r\n ' +
+            'myResume: ' + myResume.value + ' \r\n ' +
+            'myCV: ' + myCV.value + ' \r\n ' +
+            'birthday: ' + birthday.value + ' \r\n ' +
+            'favColor: ' + favColor.value + ' \r\n ' +
+            'vehicle1: ' + vehicle1.checked + ' \r\n ' +
+            'vehicle2: ' + vehicle2.checked + ' \r\n ' +
+            'vehicle3: ' + vehicle3.checked + ' \r\n ' +
+            'vehicle4: ' + vehicle4.checked + ' \r\n ' +
+            'vehicle5: ' + vehicle5.checked + ' \r\n ' +
+            'season: ' + season.value + ' \r\n ' +
+            'formFun: ' + formFun.value + ' \r\n ' +
+            'formRec: ' + formRec.value + ' \r\n ' +
+            'addFeedback: ' + addFeedback.value;
+        
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'formData.txt';
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+        newLink.click();
+    }
+</script>
+
+</body>

@@ -1,0 +1,93 @@
+/* This is for the background */
+body {
+background-color: #FFFFFF;
+}
+#yourInformation {
+    width: 600px;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#firstName {
+    width: 300px;
+    float:left; /* add this */
+    /*border: 1px solid black;*/
+}
+#lastName {
+    width: 300px;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+
+#horiWrapper1 {
+    width: 600px;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#currentLocation {
+    width: 300px;
+    float:left;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#fromLocation {
+    width: 300px;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+
+#horiWrapper2 {
+    width: 600px;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#desiredLocation {
+    width: 300px;
+    float:left;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#familyFromLocation {
+    width: 300px;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+
+#horiWrapper3 {
+    width: 600px;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#otherInfo1 {
+    width: 300px;
+    float:left;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#otherInfo2 {
+    width: 300px;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+
+#horiWrapper4 {
+    width: 600px;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#investRadio {
+    width: 300px;
+    float:left;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#investFile {
+    width: 300px;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+
+#horiWrapper5 {
+    width: 600px;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
