@@ -1,0 +1,17 @@
+This file will serve as the instructions on how to use our app.
+The instructions will be split into two parts, the professor and the student.
+
+Professor:
+After initial setup of the app, you will be promped to sign up using an email and password.
+From there you can enter your account credentials, and do any of the functions that the
+app provides. The functions are mostly self explanitory, but you can add classes, 
+remove classes, or select a class. When you select a class, you can add permission numbers,
+remove permission numbers, or free permission numbers. You can also clear all permission 
+for the selected class, or view the permission numbers for the selected class.
+
+Student:
+Once the professor sets up classes and permission numbers, students will be able to enter
+their first name, last name, student email, and student ID. With the entered information,
+students will be able to select a class and get a permission number assigned to them.
+Once they are granted a permission number, if they forget it they can enter their ID or 
+email, and they will be given the same permission number again.
