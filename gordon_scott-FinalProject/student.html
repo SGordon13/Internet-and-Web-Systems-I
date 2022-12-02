@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<head>
+    <link rel="stylesheet" type="text/css" href="student.css">
+    <title>
+        Scott Gordon & Adam King Project
+    </title>
+</head>
+
+<body>
+  <div id = "nameplateContainer" class="nameplateContainer">
+          <div id="title" class="title"><h1>Student Permission Number Request Form</h1></div>
+  </div>
+  <div id="requestHeader" class="requestHeader"><h2>Request a number</h2></div><br>
+  <form id="pageForm" action="javascript:checkValidInput()">
+      <div>Class:
+          <select name="class" id="class">
+              <option value="None" selected>NONE</option>
+          </select>
+      </div><br>
+
+      <script type="text/javascript" type="module">
+      fetch("listClasses.php")
+        .then((response) => response.text())
+        .then((classes_txt) => {
+          var classList = document.getElementById('class');
+          var classes = classes_txt.split("\n");
+          var numClasses = classes.length;
+          for (var i = 0; i < numClasses; i++) {
+            var opt = document.createElement('option');
+            opt.value = classes[i];
+            opt.innerHTML = classes[i];
+            classList.appendChild(opt);
+          }
+        })
+      </script>
+
+      <div id = "firstNameDiv" class = "sectionClass">
+          <div id = "firstNameText" class = "textClass">
+              <label for="fName">First Name:</label>
+          </div>
+          <div id = "firstNameInput" class = "inputClass">
+              <input type="text" id="fName" name="fName" value=""><br>
+          </div>
+      </div>
+      <div id = "lastNameDiv" class = "sectionClass">
+          <div id = "lastNameText" class = "textClass">
+              <label for="lName">Last Name:</label>
+          </div>
+          <div id = "lastNameInput" class = "inputClass">
+              <input type="text" id="lName" name="lName" value=""><br>
+          </div>
+      </div>
+
+      <br>
+
+      <div id = "sEmailDiv" class = "sectionClass">
+          <div id = "sEmailText" class = "textClass">
+              <label for="sEmail">Student Email:</label>
+          </div>
+          <div id = "sEmailInput" class = "inputClass">
+              <input type="text" id="sEmail" name="sEmail" value=""><br>
+          </div>
+      </div>
+      <div id = "sIDDiv" class = "sectionClass">
+          <div id = "sIDText" class = "textClass">
+              <label for="sID">Student ID:</label>
+          </div>
+          <div id = "sIDInput" class = "inputClass">
+              <input type="text" id="sID" name="sID" value=""><br>
+          </div>
+      </div>
+
+      <br>
+
+      <input type="submit" id="submitButton" value="Get Permission Number"/>
+      <br>
+      <label for="output" id="output"></label>
+  </form>
+
+  <br>
+  <div id="checkEmailHeader" class="checkEmailHeader"><h2>Check if you have assigned number using email address</h2></div>
+  <form id="checkEmailForm" action="javascript:checkEmailValidInput()">
+
+    <div>Class:
+        <select name="seClass" id="seClass">
+            <option value="None" selected>NONE</option>
+        </select>
+    </div><br>
+
+    <script type="text/javascript" type="module">
+    fetch("listClasses.php")
+      .then((response) => response.text())
+      .then((classes_txt) => {
+        var classList = document.getElementById('seClass');
+        var classes = classes_txt.split("\n");
+        var numClasses = classes.length;
+        for (var i = 0; i < numClasses; i++) {
+          var opt = document.createElement('option');
+          opt.value = classes[i];
+          opt.innerHTML = classes[i];
+          classList.appendChild(opt);
+        }
+      })
+    </script>
+
+    <div id = "seEmailDiv" class = "sectionClass">
+        <div id = "seEmailText" class = "textClass">
+            <label for="seEmail">Student Email:</label>
+        </div>
+        <div id = "seEmailInput" class = "inputClass">
+            <input type="text" id="seEmail" name="scEmail" value=""><br>
+        </div>
+    </div><br>
+
+    <input type="submit" id="submitButton" value="Check For Permission Number by Email"/><br>
+    <label for="seOutput" id="seOutput"></label>
+  </form>
+
+  <br>
+  <div id="checkIDHeader" class="checkIDHeader"><h2>Check if you have assigned number using student ID</h2></div>
+  <form id="checkIDForm" action="javascript:checkIDValidInput()">
+
+    <div>Class:
+        <select name="sIDClass" id="sIDClass">
+            <option value="None" selected>NONE</option>
+        </select>
+    </div><br>
+
+    <script type="text/javascript" type="module">
+    fetch("listClasses.php")
+      .then((response) => response.text())
+      .then((classes_txt) => {
+        var classList = document.getElementById('sIDClass');
+        var classes = classes_txt.split("\n");
+        var numClasses = classes.length;
+        for (var i = 0; i < numClasses; i++) {
+          var opt = document.createElement('option');
+          opt.value = classes[i];
+          opt.innerHTML = classes[i];
+          classList.appendChild(opt);
+        }
+      })
+    </script>
+
+    <div id = "siIDDiv" class = "sectionClass">
+        <div id = "siIDText" class = "textClass">
+            <label for="siID">Student ID:</label>
+        </div>
+        <div id = "siIDInput" class = "inputClass">
+            <input type="text" id="siID" name="siID" value=""><br>
+        </div>
+    </div><br>
+
+    <input type="submit" id="submitButton" value="Check For Permission Number by Student ID"/><br>
+    <label for="sIDOutput" id="sIDOutput"></label>
+  </form>
+
+  <script>
+    function checkValidInput(){
+
+      var out_div = document.getElementById('output');
+
+      var vFName = false;
+      var vLName = false;
+      var vEmail = false;
+      var vSID = false;
+      var vClass = false;
+
+      var fName = document.getElementById('fName').value;
+      var lName = document.getElementById('lName').value;
+      var sEmail = document.getElementById('sEmail').value;
+      var sID = document.getElementById('sID').value;
+      var classChoice = document.getElementById('class').value;
+
+      vFName = validateName(fName);
+      vLName = validateName(lName);
+      vEmail = validateEmail(sEmail);
+      vSID = validateID(sID);
+      vClass = validateClass(classChoice);
+
+      var issues = "<span style='white-space: pre-line'>";
+      if(!vFName){
+        issues = issues + "Please input a valid first name\n";
+      }
+      if(!vLName){
+        issues = issues + "Please input a valid last name\n";
+      }
+      if(!vEmail){
+        issues = issues + "Please input a valid email\n";
+      }
+      if(!vSID){
+        issues = issues + "Please input a valid ID\n";
+      }
+      if(!vClass){
+        issues = issues + "Please select a valid class\n";
+      }
+      issues = issues + "</span>";
+
+      if (issues != "<span style='white-space: pre-line'></span>") {
+        out_div.innerHTML = issues;
+        return;
+      }
+
+      var getNumForm = new FormData();
+      getNumForm.append('class', classChoice);
+      getNumForm.append('fName', fName);
+      getNumForm.append('lName', lName);
+      getNumForm.append('sID', sID);
+      getNumForm.append('sEmail', sEmail);
+      fetch("student.php", {method: 'POST', body: getNumForm})
+        .then((response) => response.text())
+        .then((student_txt) => {
+          out_div.innerHTML = student_txt;
+        })
+    }
+
+    function checkEmailValidInput(){
+      var vEmail = false;
+      var vClass = false;
+
+      var out_div = document.getElementById("seOutput");
+
+      var sEmail = document.getElementById('seEmail').value;
+      var classChoice = document.getElementById('seClass').value;
+
+      vEmail = validateEmail(sEmail);
+      vClass = validateClass(classChoice);
+
+      var issues = "<span style='white-space: pre-line'>";
+      if(!vEmail){
+        issues = issues + "Please input a valid Email\n";
+      }
+      if(!vClass){
+        issues = issues + "Please select a valid class\n";
+      }
+      issues = issues + "</span>";
+
+      if (issues != "<span style='white-space: pre-line'></span>") {
+        out_div.innerHTML = issues;
+        return;
+      }
+
+      var checkEmailForm = new FormData();
+      checkEmailForm.append('class', classChoice);
+      checkEmailForm.append('sEmail', sEmail);
+      fetch("checkByEmail.php", {method: 'POST', body: checkEmailForm})
+        .then((response) => response.text())
+        .then((check_email_txt) => {
+          out_div.innerHTML = check_email_txt;
+        })
+    }
+
+    function checkIDValidInput(){
+      var vID = false;
+      var vClass = false;
+
+      var out_div = document.getElementById("sIDOutput");
+
+      var sID = document.getElementById('siID').value;
+      var classChoice = document.getElementById('sIDClass').value;
+
+      vID = validateID(sID);
+      vClass = validateClass(classChoice);
+
+      var issues = "<span style='white-space: pre-line'>";
+      if(!vID){
+        issues = issues + "Please input a valid student ID\n";
+      }
+      if(!vClass){
+        issues = issues + "Please select a valid class\n";
+      }
+      issues = issues + "</span>";
+
+      if (issues != "<span style='white-space: pre-line'></span>") {
+        out_div.innerHTML = issues;
+        return;
+      }
+
+      var checkIDForm = new FormData();
+      checkIDForm.append('class', classChoice);
+      checkIDForm.append('sID', sID);
+      fetch("checkByID.php", {method: 'POST', body: checkIDForm})
+        .then((response) => response.text())
+        .then((check_id_txt) => {
+          out_div.innerHTML = check_id_txt;
+        })
+    }
+
+    function validateEmail(email) {
+      var regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var ctrl =  email;
+      return regex.test(ctrl);
+    }
+    function validateName(name) {
+      var regex = /^[a-zA-Z ]{2,30}$/;
+      var ctrl =  name;
+      return regex.test(ctrl);
+    }
+    function validateID(id){
+      var regex = /^[0-9]{8}$/;
+      var ctrl =  id;
+      return regex.test(ctrl);
+    }
+    function validateClass(cl){
+      var regex = /^(?!.*None).*$/;
+      var ctrl =  cl;
+      return regex.test(ctrl);
+    }
+  </script>
+</body>
