@@ -1,0 +1,26 @@
+Scott Gordon
+Project Report
+
+The problem that our application attempts to solve is the problem of permission number distribution.
+A major complaint of professors regarding permission numbers is the large quantity of emails they get
+requesting permission numbers. Students also feel frustrated with this system because they usually do not
+get an immediate response from professors. The goal of our app is to simplify and automate a 
+majority of the process. Within our app, the professor at any time can add classes, and for each class they
+can add, remove, or free up permission numbers. Students can provide their name, email, and student ID,
+choose a class, and request a permission number for that class. The students can also enter their email
+or ID to see if they have already requested a number for a chosen class.
+
+The current approach that most professors use is to simply have students email them with a permission
+number request. This requires a lot of effort from the professor, having to keep track of which numbers
+they've given out, and to reply to each student that asks. Our approach simplifies the process to a
+single setup with the same benefits of being able to monitor which numbers are taken. With our approach,
+students also don't have to wait for an email response, they will immediately be given a number if one is
+available, or they will be notified that there are no more numbers to distribute.
+
+Another approach professors are using is to create a google document with the permission numbers all
+listed. The professor will usually require students to enter their name next to a number that they
+would like to reserve. This approach is better than the previous one because it involves less direct
+communication with many students. The downside to this approach is that the order in which students
+take the numbers are random, and it relies on students filling out the form correctly and fully. Our
+approach will not give out any permission number unless credentials are provided, and it will not give
+out any permission number multiple times unless the professor explicitly frees it.
