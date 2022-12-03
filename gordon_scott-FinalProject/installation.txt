@@ -1,0 +1,23 @@
+This file will serve as the installation guide.
+
+Our app is simply html, javasript, and PHP code files. Because of this,
+there is no executable included in our submission. To get started with 
+our app, we used XAMPP to host a local server where we would test our
+application. If you want to run our app locally, you need XAMPP or a 
+similar server hosting software. For our final submission, we also got
+our project working on the uml cs servers. both of these methods will
+share a similar setup process. 
+
+Using XAMPP, you need to make sure the apache web server is running.
+You should place the files from our project in a folder placed
+in your subdirectory here: 'Applications/XAMPP/htdocs/'. Once you
+have the files in the correct location you must change the permissions
+on the data folder to 777 using the command:
+'chmod 777 ./data'
+
+Using the cs servers, you should place the files in a folder placed in
+your public_html subdirectory. Once you have the files in the correct
+location, you have to change the permissions on the entire app folder
+for the app to run correctly. You have to change the permission on the
+app folder to 777. Once you do that, you can create an account as the
+professor, and run the app normally.
