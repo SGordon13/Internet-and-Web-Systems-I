@@ -1,7 +1,12 @@
 <?php
+// This file was  developed primarily by Adam King (adam_king@student.uml.edu) with input from  Scott Gordon (scott_gordon@student.uml.edu)
     $class = $_POST["class"];
     $numbers_txt = $_POST["numbers"];
     $numbers = explode("\n", $numbers_txt);
+
+    foreach ($numbers as $n) {
+      $numbers[array_search($n, $numbers)] = str_replace(array("\r", "\n"), '', $n);
+    }
 
     $data_files = scandir('data');
     $class_file = NULL;
